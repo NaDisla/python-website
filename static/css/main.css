@@ -10,4 +10,91 @@ body {
     #3f2b96,
     #a8c0ff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin:0;
+}
+.menu-bar
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+li
+{
+  float: right;
+}
+.home
+{
+  text-decoration: none;
+  color: black;
+  float: left;
+}
+.menu-icon
+{
+  display: none;
+}
+li a 
+{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.contenedor
+{
+  padding: 20px;
+  position: relative;
+}
+.bienvenida
+{
+  width: 90%;
+  background-color: rgb(220, 220, 220);
+  height: 40%;
+  border-radius: 15px;
+  padding: 60px 30px;
+  margin: 0 auto;
+}
+.contenedor .bienvenida
+{
+  max-width: 90%;
+}
+#more-info
+{
+  width: 50%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(220, 220, 220);
+  height: 40%;
+  border-radius: 15px;
+  padding: 60px 30px;
+  display: none;
+}
+
+.title-bienvenida
+{
+  margin-bottom: 10px;
+}
+
+.simple-detail
+{
+  font-size: medium;
+}
+
+.divisor
+{
+  color:black;
+}
+
+.learn
+{
+  background-color: darkblue;
+  border-radius: 15px;
+  border-width: 0;
+  padding: 10px;
+  color:white;
 }
