@@ -11,17 +11,22 @@
     <title>Inicio - Website Python</title>
 </head>
 <body>
-  <ul class="menu-bar">
-    <li class="home"><a href="/">Python WebApp</a></li>
-    <button class="menu-icon">
-      <box-icon name='menu'></box-icon>
-    </button>
-    <li><a href="/about">About</a></li>
-    <li><a href="/">Home</a></li>
-  </ul>
+  <div class="container">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check">
+        <box-icon name='menu' id="icon-logo"></box-icon>
+      </label>
+      <label class="logo"><a href="/">Python WebApp</a></label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
     <div class="contenedor">
       {% block content %}
       {% endblock %}
     </div>
+  </div>
 </body>
 </html>

@@ -11,56 +11,76 @@ body {
     #a8c0ff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+*
+{
   padding: 0;
   margin:0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
-.menu-bar
+nav
 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  width: 100%;
+  height: 60px;
   background-color: white;
 }
-li
+.logo a
+{
+  color: black;
+  font-size: 25px;
+  line-height: 65px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul
 {
   float: right;
+  margin-right: 20px;
 }
-.home
+nav ul li
 {
-  text-decoration: none;
-  color: black;
-  float: left;
+  display: inline-block;
+  line-height: 65px;
+  margin: 0 5px;
 }
-.menu-icon
+nav ul li a
+{
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+}
+#icon-logo
+{
+  width: 40px;
+  height: 40px;
+  float: right;
+  line-height: 80px;
+  margin: 5px 30px;
+  cursor: pointer;
+  display: none;
+}
+#check
 {
   display: none;
 }
-li a 
+.container
 {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  width: 100%;
 }
 .contenedor
 {
   padding: 20px;
-  position: relative;
 }
 .bienvenida
 {
   width: 90%;
-  background-color: rgb(220, 220, 220);
+  background-color: rgba(220, 220, 220, 0.733);
   height: 40%;
   border-radius: 15px;
   padding: 60px 30px;
   margin: 0 auto;
-}
-.contenedor .bienvenida
-{
-  max-width: 90%;
 }
 #more-info
 {
@@ -74,22 +94,19 @@ li a
   padding: 60px 30px;
   display: none;
 }
-
 .title-bienvenida
 {
   margin-bottom: 10px;
 }
-
 .simple-detail
 {
   font-size: medium;
+  margin: 20px 0;
 }
-
 .divisor
 {
-  color:black;
+  border: rgba(116, 116, 116, 0.726) solid 1px;
 }
-
 .learn
 {
   background-color: darkblue;
@@ -97,4 +114,70 @@ li a
   border-width: 0;
   padding: 10px;
   color:white;
+  cursor: pointer;
+}
+.learn:hover
+{
+  transition: all .5s;
+  background-color: white;
+  color: darkblue;
+}
+.learn:focus
+{
+  outline: none;
+}
+@media (max-width: 560px)
+{
+  .bienvenida
+  {
+    width: 80%;
+  }
+}
+@media (max-width: 858px)
+{
+  .logo a
+  {
+    padding-left: 50px;
+    display: block;
+  }
+  #icon-logo
+  {
+    display: block;
+  }
+  ul
+  {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 25vh;
+    background: rgb(233, 233, 233);
+    top: 60px;
+    opacity: 0;
+    transition: visibility 0.3s linear,opacity 0.3s linear;
+    text-align: center;
+  }
+  nav ul li
+  {
+    display: block;
+    margin: 6px 0;
+    padding: 25px 0;
+    line-height: 10px;
+    border-bottom: #3f2b96 solid 1px;
+  }
+  nav ul li a
+  {
+    font-size: 20px;
+  }
+  a:hover
+  { 
+    background: none;
+    color: darkblue;
+    transition: all .5s;
+  }
+  #check:checked ~ ul
+  {
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+  }
 }
